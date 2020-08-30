@@ -1,2 +1,46 @@
 @charset "utf-8";
+@font-face{
+    font-family: roboto;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../../../fonts/Roboto-Regular.eot");
+    src: url("../../../fonts/Roboto-Regular.eot#iefix") format("embedded-opentype"),
+    url("../../../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../../../fonts/Roboto-Regular.woff") format("woff"),
+    url("../../../fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face{
+    font-family: NTSansKR;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../../../fonts/NotoSansKR-Regular.eot");
+    src: url("../../../fonts/NotoSansKR-Regular.eot#iefix") format("embedded-opentype"),
+    url("../../../fonts/NotoSansKR-Regular.woff2") format("woff2"),
+    url("../../../fonts/NotoSansKR-Regular.woff") format("woff"),
+    url("../../../fonts/NotoSansKR-Regular.ttf") format("truetype");
+}
+/* tag reset */
+body, ul{margin: 0;padding: 0;}
+ul{list-style: none;}
+a:link, a:visited, a:hover, a:active{text-decoration: none; color:inherit;}
+nav{display: block;}
 
+body{font-family: roboto, NTSansKR, Sans-serif;font-size: 16px;}
+/* 1) gnb 크기 */
+#gnb{width: 497px;height: 67px;background: #999; margin: 100px auto;color:#fff;word-break:keep-all;}
+/* 2) depth1 li만 float */
+#gnb > ul > li{float:left; position: relative;}
+/* 4) 모든 a에 여백이 적용될 수 있도록 block 선언 */
+#gnb ul li a{display: block;position:relative; z-index: 10px;}
+/* 5) 모든 a : relative => absolute인 ul에 깔려서 outline이 잘려보이지 않도록 */
+#gnb>ul>li>a{padding : 15px 27px 25px;font-size: 18px;letter-spacing: -0.025em; height: 27px;}
+/* 6) depth1 a - 오버, 포커스 */
+#gnb>ul>li:hover>a, #gnb>ul>li>a:focus, #gnb>ul>li.on>a{background: #1746a4;}
+/* 3) depth2 ul이 공간을 차지 하지 않도록 absolute */
+#gnb ul li ul{position: absolute; top:67px; left:0; background: #1746a4;
+             width: 100%;text-align: center; padding-bottom: 15px;}
+/* 7) depth2 a */
+#gnb ul li ul li a{font-size: 13px;color: rgba(255,255,255,0.8); 
+                   padding: 5px 15px;letter-spacing: -1px;}
+/* 8) depth2 a -오버, 포커스 */
+#gnb ul li ul li:hover a, #gnb ul li ul li a:focus{color:#eeff00;}
