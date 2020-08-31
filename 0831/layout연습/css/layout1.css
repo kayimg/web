@@ -1,0 +1,27 @@
+/* tag reset */
+*{margin: 0;padding: 0; text-align: center;font-size: 24px; font-weight: bold; color: #fff;}
+.clearfix::before, .clearfix::after{content:"";display: block;clear: both;}
+
+/* layout */
+#wrap{width: 1200px;margin: 0 auto;}
+
+/* header */
+#header{width:1200px;}
+#header .logo{float:left; width: 250px; height: 100px;line-height: 100px; background: #888;}
+#header .nav{float:left; width: 950px; height: 100px;line-height: 100px; background:#777;}
+
+/* banner */
+#banner{height: 400px;line-height: 300px;background: #666;}
+
+/* content */
+#content{width: 100%;}
+#content > div{float:left;width:400px; height: 200px;line-height: 200px;}
+#content > div.con1{background: #555;}
+#content > div.con2{background: #444;}
+#content > div.con3{background: #333;}
+
+/* footer */
+#footer{line-height: 100px;}
+#footer .foot1{float:left;width: 200px;height: 100px;background: #222;}
+#footer .foot2{float:left;width: 800px;height: 100px;background: #111;}
+#footer .foot3{float:left;width: 200px;height: 100px;background: #000;}
